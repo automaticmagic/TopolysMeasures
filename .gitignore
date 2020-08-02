@@ -16,6 +16,10 @@
 /lib/measures/test_results
 /lib/measures/.rubocop*
 
+# graphviz output
+shell.dot
+shell.pdf
+
 # rspec failure tracking
 .rspec_status
 
