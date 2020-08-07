@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://json-schema.org/automaticmagic/topolys.json#",
+  "title": "Topolys Measures Vertex Properties Schema",
+  "description": "Schema for the Vertex Properties for Topolys Measures",
+  
+  "type": "object",
+  "properties": {
+    "required": []
+  }
+}

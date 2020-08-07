@@ -18,10 +18,16 @@ task :update_library_files do
       lib_files = Dir.glob(File.join(load_path, 'topolys/*.rb'))
     end
   end
-  puts lib_files
   
-  measure_resources = Dir.glob('./lib/measures/*/resources')
-  
+  schema_files = Dir.glob(File.join(File.dirname(__FILE__), './lib/topolys_measures/schema/*.json'))
+  measure_resources = Dir.glob(File.join(File.dirname(__FILE__), './lib/measures/*/resources'))
+
+  schema_files.each do |schema_file|
+    measure_resources.each do |measure_resource|
+      FileUtils.cp(schema_file, "#{measure_resource}/.")
+    end
+  end
+
   lib_files.each do |lib_file|
     measure_resources.each do |measure_resource|
       FileUtils.cp(lib_file, "#{measure_resource}/.")
