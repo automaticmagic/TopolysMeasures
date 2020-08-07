@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://json-schema.org/automaticmagic/topolys.json#",
+  "title": "Topolys Measures Face Properties Schema",
+  "description": "Schema for the Face Properties for Topolys Measures",
+  
+  "type": "object",
+  "properties": {
+    "psi_value": { "type": "number" },
+    "required": ["psi_value"]
+  }
+}
