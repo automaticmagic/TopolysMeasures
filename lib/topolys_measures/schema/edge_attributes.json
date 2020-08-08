@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://json-schema.org/automaticmagic/topolys.json#",
-  "title": "Topolys Measures Edge Properties Schema",
-  "description": "Schema for the Edge Properties for Topolys Measures",
+  "id": "http://json-schema.org/automaticmagic/TopolysMeasures/EdgeAttributes.json#",
+  "title": "Topolys Measures Edge Attributes Schema",
+  "description": "Schema for Topolys Edge Attributes used by Topolys Measures",
   
   "type": "object",
   "properties": {
