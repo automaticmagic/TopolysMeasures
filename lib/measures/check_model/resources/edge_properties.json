@@ -6,7 +6,8 @@
   
   "type": "object",
   "properties": {
-    "edge_material": { "type": "string" },
-    "required": []
+    "length": { "type": "number" },
+    "surface_names": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "required": ["length", "surface_names"]
   }
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://json-schema.org/automaticmagic/topolys.json#",
+  "title": "Topolys Measures Edge Properties Schema",
+  "description": "Schema for the Edge Properties for Topolys Measures",
+  
+  "type": "object",
+  "properties": {
+    "faces": {
+      "type": "array",
+      "items": { 
+        "type": "object",
+        "properties": {
+          "surface_name": { "type": "string" },
+          "surface_type": { "type": "string", "enum": ["Floor", "Wall", "RoofCeiling"] },
+          "boundary_type": { "type": "string", "enum": ["Adiabatic", "Outdoors", "Ground"] },
+          "edges": {
+            "type": "array",
+            "items": { 
+              "type": "object",
+              "properties": {
+                "length": { "type": "number" },
+                "surface_names": { "type": "array", "items": { "type": "string" }, "default": [] }
+              },
+              "required": ["length", "surface_names"]
+            }
+          }
+        },
+        "required": ["surface_name", "surface_type", "boundary_type", "edges"]
+      }
+    }
+  }
+}

@@ -17,8 +17,9 @@
 /lib/measures/.rubocop*
 
 # graphviz output
-shell.dot
-shell.pdf
+/shell.dot
+/shell.pdf
+/*.json
 
 # rspec failure tracking
 .rspec_status

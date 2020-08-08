@@ -6,7 +6,9 @@
   
   "type": "object",
   "properties": {
-    "psi_value": { "type": "number" },
-    "required": ["psi_value"]
+    "surface_name": { "type": "string" },
+    "surface_type": { "type": "string", "enum": ["Floor", "Wall", "RoofCeiling"] },
+    "boundary_type": { "type": "string", "enum": ["Surface", "Outdoors", "Ground"] },
+    "required": ["surface_name", "surface_type", "boundary_type"]
   }
 }

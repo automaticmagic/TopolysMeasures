@@ -50,8 +50,21 @@ class CheckModel < OpenStudio::Measure::ModelMeasure
         points = (t*surface.vertices).map{|v| Topolys::Point3D.new(v.x, v.y, v.z) }
         minz = (points.map{|p| p.z}).min
         surface_type = surface.surfaceType
+        boundary_type = surface.outsideBoundaryCondition
         gross_area = surface.grossArea
-        surface_structs << {surface: surface, surface_type: surface_type, gross_area: gross_area, points: points, minz: minz, space: space, face: nil, shell: nil}
+        surface_structs << {surface: surface, surface_type: surface_type, boundary_type: boundary_type, gross_area: gross_area, points: points, minz: minz, space: space, face: nil, shell: nil}
+      end
+    end
+    
+    # map OpenStudio enums down to ours
+    surface_structs.each_index do |i|
+      case surface_structs[i][:boundary_type]
+      when 'Surface', 'Adiabatic'
+        surface_structs[i][:boundary_type] = 'Adiabatic'
+      when 'Outdoors'
+        surface_structs[i][:boundary_type] = 'Outdoors'
+      else
+        surface_structs[i][:boundary_type] = 'Ground'
       end
     end
     
@@ -83,9 +96,17 @@ class CheckModel < OpenStudio::Measure::ModelMeasure
       face = tpm.get_face(wire, [])
       puts "face = #{face}"
       face.attributes[:surface] = surface_structs[i][:surface]
+      face.attributes[:surface_name] = surface_structs[i][:surface].nameString
       face.attributes[:surface_type] = surface_structs[i][:surface_type]
-      face.attributes[:space] = surface_structs[i][:space]
+      face.attributes[:boundary_type] = surface_structs[i][:boundary_type]
+      
       surface_structs[i][:face] = face
+      
+      face.outer.edges.each do |edge|
+        edge.attributes[:length] = edge.length if edge.attributes[:length].nil?
+        edge.attributes[:surface_names] = [] if edge.attributes[:surface_names].nil?
+        edge.attributes[:surface_names] << surface_structs[i][:surface].nameString
+      end
     end
     
     # create a Topolys Shell for each OpenStudio Space
@@ -122,7 +143,27 @@ class CheckModel < OpenStudio::Measure::ModelMeasure
     # install graphviz and make sure dot is in the system path
     tpm.save_graphviz('shell.dot')
     system('dot shell.dot -Tpdf -o shell.pdf')
-
+    
+    # save the full model
+    tpm.save('full_tpm.json')
+    
+    # create a minimal model
+    minimal_model = { faces: [] }
+    tpm.faces.each do |face| 
+      minimal_face = face.attributes.clone
+      minimal_face.delete(:surface)
+      minimal_face[:edges] = []
+      face.outer.edges.each do |edge|
+        minimal_face[:edges] << edge.attributes.clone
+      end
+      minimal_model[:faces] << minimal_face
+    end
+    
+    # save the minimal model
+    File.open('minimal_model.json', 'w') do |file|
+      file.puts JSON.pretty_generate(minimal_model) 
+    end
+    
     return true
   end
 end
