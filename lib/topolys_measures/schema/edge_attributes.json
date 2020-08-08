@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://json-schema.org/automaticmagic/TopolysMeasures/EdgeAttributes.json#",
+  "title": "Topolys Measures Edge Attributes Schema",
+  "description": "Schema for Topolys Edge Attributes used by Topolys Measures",
+  
+  "type": "object",
+  "properties": {
+    "length": { "type": "number" },
+    "surface_names": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "required": ["length", "surface_names"]
+  }
+}
