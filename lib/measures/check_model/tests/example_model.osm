@@ -1,7 +1,21 @@
 
 OS:Version,
-  {f19c731b-418b-4769-bbe8-2634b34ddb76}, !- Handle
-  1.13.0;                                 !- Version Identifier
+  {644a1d54-5df2-445d-8f3b-cea5b51384ed}, !- Handle
+  2.9.1;                                  !- Version Identifier
+
+OS:Schedule:Constant,
+  {f8ce0058-0f3c-4a0c-9489-fc01af8e48a5}, !- Handle
+  Always On Discrete,                     !- Name
+  {36da6b13-7c2f-4a2c-a2ec-b8ef5b701ba4}, !- Schedule Type Limits Name
+  1;                                      !- Value
+
+OS:ScheduleTypeLimits,
+  {36da6b13-7c2f-4a2c-a2ec-b8ef5b701ba4}, !- Handle
+  Always On Discrete Limits,              !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Discrete,                               !- Numeric Type
+  Availability;                           !- Unit Type
 
 OS:SpaceType,
   {d83c9d8c-b4ea-4352-92bc-43a5e8551039}, !- Handle
@@ -10,6 +24,7 @@ OS:SpaceType,
   {3f64b7db-745b-40b0-bb02-6ec871a396ef}, !- Default Schedule Set Name
   {d1e86687-6885-4070-81da-3a576f17ff5c}, !- Group Rendering Name
   {67f2822d-9200-410d-bad4-ca1adb4cbb77}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   BreakRoom;                              !- Standards Space Type
 
@@ -895,6 +910,7 @@ OS:SpaceType,
   {9b9fb4b7-7437-423f-a42a-1e1800e6055c}, !- Default Schedule Set Name
   {a57916a4-2d44-41b9-a1e1-917f01e6e980}, !- Group Rendering Name
   {f46c6550-abd3-4dc9-b2fd-3521e6458afe}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   ClosedOffice;                           !- Standards Space Type
 
@@ -1138,6 +1154,7 @@ OS:SpaceType,
   {e3b81960-34e9-43e9-802b-72dc932ec324}, !- Default Schedule Set Name
   {ec05571d-f09e-46c5-830e-02e7c83716e2}, !- Group Rendering Name
   {a1ac4f23-b7fd-439b-9144-9025bbf81b99}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Conference;                             !- Standards Space Type
 
@@ -1243,6 +1260,7 @@ OS:SpaceType,
   {60152e25-975f-42e9-a93e-854a20be3577}, !- Default Schedule Set Name
   {9637cafc-bc8f-40aa-8756-39cbbba37ac4}, !- Group Rendering Name
   {43c2eb8f-ca41-472d-a661-37d29e1aa470}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Corridor;                               !- Standards Space Type
 
@@ -1348,6 +1366,7 @@ OS:SpaceType,
   {7034f523-a923-4bff-bcec-e836877b0d3b}, !- Default Schedule Set Name
   {8a8c0cb1-8336-469c-bca4-e17997f803bb}, !- Group Rendering Name
   {69d02fbd-3b65-4514-8330-355612e92de3}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Elec/MechRoom;                          !- Standards Space Type
 
@@ -1438,6 +1457,7 @@ OS:SpaceType,
   {ba84ee14-7d89-4e59-8d59-625209be8ce9}, !- Default Schedule Set Name
   {20b4e546-0bb5-45c4-b8f0-ba4246a49c01}, !- Group Rendering Name
   {2f4b0680-26b1-4103-9f70-412db3ebdfbe}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   IT_Room;                                !- Standards Space Type
 
@@ -1543,6 +1563,7 @@ OS:SpaceType,
   {e0c21456-bd44-4237-8936-486557ac00f6}, !- Default Schedule Set Name
   {0e5a132c-e7c3-4583-ad5a-cf0bf0fe2d03}, !- Group Rendering Name
   {f648ca0a-523e-4cd1-9141-0b84b7a81954}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Lobby;                                  !- Standards Space Type
 
@@ -1648,6 +1669,7 @@ OS:SpaceType,
   {036543da-4144-409d-981b-4ddf12ce677e}, !- Default Schedule Set Name
   {e1b28003-ba15-4183-b5d9-585f72709eff}, !- Group Rendering Name
   {f57d4115-03b8-4303-b205-42221bda4210}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   OpenOffice;                             !- Standards Space Type
 
@@ -1757,6 +1779,7 @@ OS:Building,
   ,                                       !- Default Schedule Set Name
   ,                                       !- Standards Number of Stories
   ,                                       !- Standards Number of Above Ground Stories
+  ,                                       !- Standards Template
   ,                                       !- Standards Building Type
   ,                                       !- Standards Number of Living Units
   ,                                       !- Relocatable
@@ -1769,6 +1792,7 @@ OS:SpaceType,
   {7b266719-acd7-491e-9cdb-d0f00a5dfec4}, !- Default Schedule Set Name
   {061734ce-19f4-4c27-a203-4b67b00d47ac}, !- Group Rendering Name
   {107e2dcf-081d-47d9-b8b0-921f5279392b}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   PrintRoom;                              !- Standards Space Type
 
@@ -1874,6 +1898,7 @@ OS:SpaceType,
   {2cb74439-6b94-4bdb-bc70-0ca10c0d3b2e}, !- Default Schedule Set Name
   {e64f5cb7-2c3d-45a9-84a6-367125f15aff}, !- Group Rendering Name
   {65cf1445-a2aa-42ad-9ff8-c4b30ec4e53d}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Restroom;                               !- Standards Space Type
 
@@ -1979,6 +2004,7 @@ OS:SpaceType,
   {63837c20-3153-4ace-86c9-1d8bf8b43d7a}, !- Default Schedule Set Name
   {d956b768-7de2-4589-97c3-e0178f40b773}, !- Group Rendering Name
   {65e99483-2d7e-4ca8-9e0d-a7914f938f56}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Stair;                                  !- Standards Space Type
 
@@ -2055,6 +2081,7 @@ OS:SpaceType,
   {c81d9947-159d-4809-8a7f-ae3bb2fe95fa}, !- Default Schedule Set Name
   {40564289-28c7-4fd8-b822-fe7139d1f5bf}, !- Group Rendering Name
   {99330741-43bc-49e4-9991-d6cf4a0ba4aa}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Storage;                                !- Standards Space Type
 
@@ -2131,6 +2158,7 @@ OS:SpaceType,
   {c044c52f-9474-4ba2-9f45-7069de4c6b87}, !- Default Schedule Set Name
   {cf88ad3d-58c9-452c-88c4-ac7ea371f930}, !- Group Rendering Name
   {6dbe4189-6232-4d6e-9ac9-63d6e0ee9668}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Vending;                                !- Standards Space Type
 
@@ -2236,6 +2264,7 @@ OS:SpaceType,
   {39feaf8a-6d16-4e68-9b8c-db2038aff03f}, !- Default Schedule Set Name
   {6fc91438-7cba-42dc-a37d-48434d3c06ca}, !- Group Rendering Name
   {b1c52cb5-3326-4b43-a12f-f30cb1ac3119}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Lg Office;              !- Standards Space Type
 
@@ -3133,6 +3162,7 @@ OS:SpaceType,
   {f97da1fb-3578-4a67-9933-d2891cb549b6}, !- Default Schedule Set Name
   {03e06c9d-a4bc-49de-952a-4329faa7fb71}, !- Group Rendering Name
   {8f13e24f-0968-430b-82b1-c5e41da9fafa}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Md Office;              !- Standards Space Type
 
@@ -3662,6 +3692,7 @@ OS:SpaceType,
   {d32f1055-150c-4db0-85e7-cd8d80091a97}, !- Default Schedule Set Name
   {acb4804a-6b98-49bc-8337-c128f3c2ea30}, !- Group Rendering Name
   {6410e886-4201-485e-a1a7-5fa1c8b6bdf4}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Sm Office;              !- Standards Space Type
 
@@ -4414,6 +4445,7 @@ OS:SpaceType,
   {0b0d7d0e-8e0c-4d73-bbd0-4d262ac73220}, !- Default Schedule Set Name
   {99b31bfd-0d42-45f4-a0d8-d4817aca24ae}, !- Group Rendering Name
   {f6d5ea3e-58cf-41e5-81fb-02117411a981}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   BreakRoom;                              !- Standards Space Type
 
@@ -4519,6 +4551,7 @@ OS:SpaceType,
   {45d37156-65d2-4044-abc0-329c2491e0be}, !- Default Schedule Set Name
   {6dc82c65-0965-48c5-9394-1f57bef18075}, !- Group Rendering Name
   {2cbf38dd-78ec-43cf-9455-8dba2eee1857}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   ClosedOffice;                           !- Standards Space Type
 
@@ -4624,6 +4657,7 @@ OS:SpaceType,
   {e6c39dce-80ca-4ed4-a781-b5e18baff696}, !- Default Schedule Set Name
   {202e2808-fe0a-49ec-8437-4c794472a9a0}, !- Group Rendering Name
   {b8c9a3c5-53fb-4331-9614-87a518236f35}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Conference;                             !- Standards Space Type
 
@@ -4729,6 +4763,7 @@ OS:SpaceType,
   {666e2765-a8cc-4272-9029-54b416bb2610}, !- Default Schedule Set Name
   {340eeae9-9587-4e04-b7fe-21214fa0042c}, !- Group Rendering Name
   {fd69f378-0e94-4fdd-a231-f37cf315cc66}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Corridor;                               !- Standards Space Type
 
@@ -4834,6 +4869,7 @@ OS:SpaceType,
   {4390b43b-ded0-461f-b061-f042bc13f91f}, !- Default Schedule Set Name
   {09cc0a44-bde3-4ae8-97d5-6973b620eb23}, !- Group Rendering Name
   {1fbee130-5b8b-41c4-b2e5-a35b678e1a1c}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Elec/MechRoom;                          !- Standards Space Type
 
@@ -4924,6 +4960,7 @@ OS:SpaceType,
   {a77ae8b7-4aa2-41f7-b5a6-8856ba6e1aa9}, !- Default Schedule Set Name
   {03a758bb-e62a-48b9-97b4-e7c9725503de}, !- Group Rendering Name
   {c78ecc49-33c1-4baa-8f4a-3a3d4e3253e7}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   IT_Room;                                !- Standards Space Type
 
@@ -5029,6 +5066,7 @@ OS:SpaceType,
   {69f043ea-7f0a-4f57-a9b9-d557929fc49e}, !- Default Schedule Set Name
   {74dc8dad-959b-491c-a50a-9af6ecd0a669}, !- Group Rendering Name
   {dbdfd940-1c36-4bd0-afb4-880a785c5e6f}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Lobby;                                  !- Standards Space Type
 
@@ -5134,6 +5172,7 @@ OS:SpaceType,
   {67cfc28b-9f66-4e18-8b2c-25a2ff33fd11}, !- Default Schedule Set Name
   {ede0a72d-692f-411e-898f-ccb1f783c262}, !- Group Rendering Name
   {f4a649b7-7f7c-4bc5-9b02-e4e1aa4803e9}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   OpenOffice;                             !- Standards Space Type
 
@@ -5239,6 +5278,7 @@ OS:SpaceType,
   {01dc8eb4-a4fa-4aaf-8d75-b7cfd75648a4}, !- Default Schedule Set Name
   {b7fe6f07-3ac4-4ca1-9186-5c7889d7b3da}, !- Group Rendering Name
   {6c78e848-e562-4461-b538-4e3e3c4e848c}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   PrintRoom;                              !- Standards Space Type
 
@@ -5344,6 +5384,7 @@ OS:SpaceType,
   {e66e0cc6-efb5-4211-818f-1431a0e70233}, !- Default Schedule Set Name
   {719a1449-7853-4161-927b-bdb7f01806ed}, !- Group Rendering Name
   {1aeb672d-5c17-4118-b3f0-dfbc58007e1f}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Restroom;                               !- Standards Space Type
 
@@ -5449,6 +5490,7 @@ OS:SpaceType,
   {1d7040c9-cc51-49e9-bced-99919b77079e}, !- Default Schedule Set Name
   {6f557e2a-06b2-4e96-bd62-f7b1f6d0b22c}, !- Group Rendering Name
   {06eb26bf-daae-4d7b-802f-f14f4973bffc}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Stair;                                  !- Standards Space Type
 
@@ -5525,6 +5567,7 @@ OS:SpaceType,
   {67b9c134-6af2-4034-8be9-99c918290f72}, !- Default Schedule Set Name
   {e5e5daee-9c0f-481c-8a95-52831d130704}, !- Group Rendering Name
   {891b5948-4e38-4554-a2f6-43f94ec5ae02}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Storage;                                !- Standards Space Type
 
@@ -5601,6 +5644,7 @@ OS:SpaceType,
   {6dfba6f2-b96a-492d-b774-c4c720d68d2b}, !- Default Schedule Set Name
   {76d6f7c9-7ceb-45e9-8a19-835ab84a952b}, !- Group Rendering Name
   {0f1e8aef-c843-4ab6-b548-4c72c5fef55a}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   Vending;                                !- Standards Space Type
 
@@ -5706,6 +5750,7 @@ OS:SpaceType,
   {b9bfde29-315f-4eb8-bf9a-46a78dff4fac}, !- Default Schedule Set Name
   {a76d196b-e761-4493-8631-b48b5e34c13c}, !- Group Rendering Name
   {243951cc-1d54-4682-88de-92f00facb5d4}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Lg Office;              !- Standards Space Type
 
@@ -5811,6 +5856,7 @@ OS:SpaceType,
   {172a4339-c515-4808-9bf0-cd607a6b94aa}, !- Default Schedule Set Name
   {d962ce0f-1f09-4520-8086-d251309638ff}, !- Group Rendering Name
   {3157c89d-76b6-49f9-b874-c887b361d5a2}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Md Office;              !- Standards Space Type
 
@@ -5916,6 +5962,7 @@ OS:SpaceType,
   {6784963e-ba4d-4175-87dd-b5831f929d87}, !- Default Schedule Set Name
   {2fd05332-007b-4350-8fd3-4733ddca3f69}, !- Group Rendering Name
   {22c007c1-ce62-40f2-8ab0-14c6a644baf2}, !- Design Specification Outdoor Air Object Name
+  ,                                       !- Standards Template
   Office,                                 !- Standards Building Type
   WholeBuilding - Sm Office;              !- Standards Space Type
 
@@ -6025,7 +6072,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {94698301-6b84-4a6f-8b78-75bca600fb17}, !- Handle
@@ -6453,7 +6501,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {8edba1bd-b329-4c83-a9b8-09990e95b65e}, !- Handle
@@ -6595,7 +6644,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {79cccbfe-3f49-4acb-bdf2-e7139171fa8f}, !- Handle
@@ -6711,7 +6761,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {3ef37f21-bbe3-4f3b-9b65-3ad9770f3a44}, !- Handle
@@ -6827,7 +6878,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {f6881ecb-7aaf-431a-b1d2-61de79238f70}, !- Handle
@@ -6912,7 +6964,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {f4c2eff4-616f-4e59-a975-63e8f99df809}, !- Handle
@@ -7066,7 +7119,8 @@ OS:DefaultConstructionSet,
   {ead91c2f-4359-42f5-b36e-9a36c9253598}, !- Interior Partition Construction Name
   ,                                       !- Space Shading Construction Name
   ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
 
 OS:DefaultSurfaceConstructions,
   {6e044d24-cbba-456f-af36-8b86f1508f50}, !- Handle
@@ -7411,7 +7465,11 @@ OS:Space,
   0,                                      !- X Origin {m}
   3.048,                                  !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {50868583-cd6e-4b33-9980-93aced1f0725}; !- Building Story Name
+  {50868583-cd6e-4b33-9980-93aced1f0725}, !- Building Story Name
+  ,                                       !- Thermal Zone Name
+  ,                                       !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {34613696-6b52-44f1-a5ff-a36900647fd1}, !- Handle
@@ -7525,7 +7583,11 @@ OS:Space,
   6.096,                                  !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {50868583-cd6e-4b33-9980-93aced1f0725}; !- Building Story Name
+  {50868583-cd6e-4b33-9980-93aced1f0725}, !- Building Story Name
+  ,                                       !- Thermal Zone Name
+  ,                                       !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {19d18d73-c9ca-4549-a15e-3a457813fcf2}, !- Handle
@@ -7639,7 +7701,11 @@ OS:Space,
   0,                                      !- X Origin {m}
   6.096,                                  !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {50868583-cd6e-4b33-9980-93aced1f0725}; !- Building Story Name
+  {50868583-cd6e-4b33-9980-93aced1f0725}, !- Building Story Name
+  ,                                       !- Thermal Zone Name
+  ,                                       !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {74a5de71-ac42-4838-888e-c4db7769715a}, !- Handle
@@ -7722,9 +7788,11 @@ OS:Surface,
   ,                                       !- View Factor to Ground
   ,                                       !- Number of Vertices
   0, 0, 3.048,                            !- X,Y,Z Vertex 1 {m}
-  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
-  0, -3.048, 0,                           !- X,Y,Z Vertex 3 {m}
-  0, -3.048, 3.048;                       !- X,Y,Z Vertex 4 {m}
+  0, 0, 1.5319375,                        !- X,Y,Z Vertex 2 {m}
+  0, -1.012825, 1.5319375,                !- X,Y,Z Vertex 3 {m}
+  0, -1.012825, 0,                        !- X,Y,Z Vertex 4 {m}
+  0, -3.048, 0,                           !- X,Y,Z Vertex 5 {m}
+  0, -3.048, 3.048;                       !- X,Y,Z Vertex 6 {m}
 
 OS:Surface,
   {f7e843c5-68c1-43f0-9204-c49b0f3332a6}, !- Handle
@@ -7753,7 +7821,11 @@ OS:Space,
   6.096,                                  !- X Origin {m}
   3.048,                                  !- Y Origin {m}
   0,                                      !- Z Origin {m}
-  {50868583-cd6e-4b33-9980-93aced1f0725}; !- Building Story Name
+  {50868583-cd6e-4b33-9980-93aced1f0725}, !- Building Story Name
+  ,                                       !- Thermal Zone Name
+  ,                                       !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {81f77032-b16a-42d2-9517-02ae4c166df8}, !- Handle
@@ -7836,9 +7908,11 @@ OS:Surface,
   ,                                       !- View Factor to Ground
   ,                                       !- Number of Vertices
   0, 0, 3.048,                            !- X,Y,Z Vertex 1 {m}
-  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
-  0, 3.048, 0,                            !- X,Y,Z Vertex 3 {m}
-  0, 3.048, 3.048;                        !- X,Y,Z Vertex 4 {m}
+  0, 0, 1.92405,                          !- X,Y,Z Vertex 2 {m}
+  0, 1.470025, 1.92405,                   !- X,Y,Z Vertex 3 {m}
+  0, 1.470025, 0,                         !- X,Y,Z Vertex 4 {m}
+  0, 3.048, 0,                            !- X,Y,Z Vertex 5 {m}
+  0, 3.048, 3.048;                        !- X,Y,Z Vertex 6 {m}
 
 OS:Surface,
   {8d537633-3f6b-476a-b746-cea3a8736eed}, !- Handle
@@ -7863,125 +7937,6 @@ OS:Rendering:Color,
   186,                                    !- Rendering Red Value
   85,                                     !- Rendering Green Value
   211;                                    !- Rendering Blue Value
-
-OS:SubSurface,
-  {c338f8b3-5a59-499c-98ca-df5a820387cd}, !- Handle
-  Sub Surface 1,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {04c217f9-794f-482e-9566-bc9939ac2b67}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  3.0226, 0, 1.99986440677966,            !- X,Y,Z Vertex 1 {m}
-  3.0226, 0, 0.76,                        !- X,Y,Z Vertex 2 {m}
-  0.0254000000000003, 0, 0.76,            !- X,Y,Z Vertex 3 {m}
-  0.0254000000000003, 0, 1.99986440677966; !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {dbcac169-5385-435a-ac98-e7891b7f2a0a}, !- Handle
-  Sub Surface 2,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {29c6e6ba-2a04-4ad6-9f09-69b0692bd305}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  0, -0.0254, 1.99986440677966,           !- X,Y,Z Vertex 1 {m}
-  0, -0.0254, 0.76,                       !- X,Y,Z Vertex 2 {m}
-  0, -3.0226, 0.76,                       !- X,Y,Z Vertex 3 {m}
-  0, -3.0226, 1.99986440677966;           !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {bf6c0bb6-20be-45a4-a12e-df2480492bc9}, !- Handle
-  Sub Surface 3,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {3ce940a4-dffc-4da5-8e17-a47c6fde3c37}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -0.0254, 3.048, 1.99986440677966,       !- X,Y,Z Vertex 1 {m}
-  -0.0254, 3.048, 0.76,                   !- X,Y,Z Vertex 2 {m}
-  -3.0226, 3.048, 0.76,                   !- X,Y,Z Vertex 3 {m}
-  -3.0226, 3.048, 1.99986440677966;       !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {d4037884-9d56-4f6f-ac6d-65640af8fdc2}, !- Handle
-  Sub Surface 4,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {5adfa187-cd8e-4214-9ea8-4a4f634cf64c}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  0, 0.0254, 1.99986440677966,            !- X,Y,Z Vertex 1 {m}
-  0, 0.0254, 0.76,                        !- X,Y,Z Vertex 2 {m}
-  0, 3.0226, 0.76,                        !- X,Y,Z Vertex 3 {m}
-  0, 3.0226, 1.99986440677966;            !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {e34c1857-0462-47ea-9da7-7fe1b23da808}, !- Handle
-  Sub Surface 5,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {5cfd7343-beef-4dd8-96ff-05ad91c84aad}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  0.0254, -3.048, 1.99986440677966,       !- X,Y,Z Vertex 1 {m}
-  0.0254, -3.048, 0.76,                   !- X,Y,Z Vertex 2 {m}
-  3.0226, -3.048, 0.76,                   !- X,Y,Z Vertex 3 {m}
-  3.0226, -3.048, 1.99986440677966;       !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {e7397205-f157-47fc-ad9a-a675aab3b3c7}, !- Handle
-  Sub Surface 6,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {80879f81-820f-4603-b611-b68e1595cb6e}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  0, 0.0254, 1.99986440677966,            !- X,Y,Z Vertex 1 {m}
-  0, 0.0254, 0.76,                        !- X,Y,Z Vertex 2 {m}
-  0, 3.0226, 0.76,                        !- X,Y,Z Vertex 3 {m}
-  0, 3.0226, 1.99986440677966;            !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {f4f4b729-630c-44aa-b175-61ca8c5dbc18}, !- Handle
-  Sub Surface 7,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {b3fe4f2a-ff3a-493e-9743-c7be2c1ce9d2}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -3.0226, 0, 1.99986440677966,           !- X,Y,Z Vertex 1 {m}
-  -3.0226, 0, 0.76,                       !- X,Y,Z Vertex 2 {m}
-  -0.0254000000000003, 0, 0.76,           !- X,Y,Z Vertex 3 {m}
-  -0.0254000000000003, 0, 1.99986440677966; !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
   {3c09fbeb-0873-4676-861c-11a90d465e89}, !- Handle
@@ -8074,4 +8029,123 @@ OS:LifeCycleCost:Parameters,
   ,                                       !- Service Date Month
   ,                                       !- Service Date Year
   ;                                       !- Length of Study Period in Years
+
+OS:SubSurface,
+  {6adc6ecb-03ae-41d7-99ce-0f46cda494e8}, !- Handle
+  Sub Surface 1,                          !- Name
+  Door,                                   !- Sub Surface Type
+  ,                                       !- Construction Name
+  {5cfd7343-beef-4dd8-96ff-05ad91c84aad}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  0.865703858146919, -3.048, 1.6696088221413, !- X,Y,Z Vertex 1 {m}
+  0.865703858146919, -3.048, 0,           !- X,Y,Z Vertex 2 {m}
+  1.89757885814692, -3.048, 0,            !- X,Y,Z Vertex 3 {m}
+  1.89757885814692, -3.048, 1.6696088221413; !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {ee3c614c-22bd-4040-a3c4-5db387d76f24}, !- Handle
+  Sub Surface 2,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {b3fe4f2a-ff3a-493e-9743-c7be2c1ce9d2}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -1.91135, 0, 2.32175025610753,          !- X,Y,Z Vertex 1 {m}
+  -1.91135, 0, 0.867600256107532,         !- X,Y,Z Vertex 2 {m}
+  0, 0, 0.867600256107532,                !- X,Y,Z Vertex 3 {m}
+  0, 0, 2.32175025610753;                 !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {16add928-6b23-46f1-a8c4-5bc7928be53f}, !- Handle
+  Sub Surface 3,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {80879f81-820f-4603-b611-b68e1595cb6e}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  0, 0, 2.32175025610753,                 !- X,Y,Z Vertex 1 {m}
+  0, 0, 0.867600256107532,                !- X,Y,Z Vertex 2 {m}
+  0, 1.5777202421899, 0.867600256107532,  !- X,Y,Z Vertex 3 {m}
+  0, 1.5777202421899, 2.32175025610753;   !- X,Y,Z Vertex 4 {m}
+
+OS:Surface,
+  {d876b757-440b-43e4-aca5-2af2ed91307b}, !- Handle
+  Surface 25,                             !- Name
+  Wall,                                   !- Surface Type
+  ,                                       !- Construction Name
+  {3810e56a-95f5-4687-b896-06caf8120348}, !- Space Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  ,                                       !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 0, 1.92405,                          !- X,Y,Z Vertex 1 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  0, 1.470025, 0,                         !- X,Y,Z Vertex 3 {m}
+  0, 1.470025, 1.92405;                   !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {dccd58b4-3eb0-481c-94c2-f3a333ad0c05}, !- Handle
+  Sub Surface 4,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {04c217f9-794f-482e-9566-bc9939ac2b67}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.048, 0, 2.12166655695879,             !- X,Y,Z Vertex 1 {m}
+  3.048, 0, 1.14852905695879,             !- X,Y,Z Vertex 2 {m}
+  1.4734304492729, 0, 1.14852905695879,   !- X,Y,Z Vertex 3 {m}
+  1.4734304492729, 0, 2.12166655695879;   !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {82c2b8ff-bdd7-4619-9804-d57308a031f0}, !- Handle
+  Sub Surface 5,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {3ce940a4-dffc-4da5-8e17-a47c6fde3c37}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -2.32922357426451, 3.048, 2.12166655695879, !- X,Y,Z Vertex 1 {m}
+  -2.32922357426451, 3.048, 1.14852905695879, !- X,Y,Z Vertex 2 {m}
+  -3.048, 3.048, 1.14852905695879,        !- X,Y,Z Vertex 3 {m}
+  -3.048, 3.048, 2.12166655695879;        !- X,Y,Z Vertex 4 {m}
+
+OS:Surface,
+  {45f0a20a-e20b-4547-9b33-28e7e908ddcb}, !- Handle
+  Surface 26,                             !- Name
+  Wall,                                   !- Surface Type
+  ,                                       !- Construction Name
+  {b5a1aae9-e0e9-4254-bf19-cebfb520aed5}, !- Space Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  ,                                       !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  0, 0, 1.5319375,                        !- X,Y,Z Vertex 1 {m}
+  0, 0, 0,                                !- X,Y,Z Vertex 2 {m}
+  0, -1.012825, 0,                        !- X,Y,Z Vertex 3 {m}
+  0, -1.012825, 1.5319375;                !- X,Y,Z Vertex 4 {m}
 
