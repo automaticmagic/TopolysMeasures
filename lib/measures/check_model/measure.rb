@@ -144,6 +144,10 @@ class CheckModel < OpenStudio::Measure::ModelMeasure
       #puts "faces = #{faces}" # DLM: why does this line blow up?
       puts "faces = #{faces.size}"
       shell = tpm.get_shell(faces)
+      if shell.nil?
+        puts "cannot construct shell for #{space.nameString}"
+        return false
+      end
       shell.attributes[:space] = space
       puts "shell = #{shell}, closed = #{shell.closed?}"
     end
