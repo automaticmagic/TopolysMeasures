@@ -1,26 +1,18 @@
+<?xml version="1.0"?>
 <measure>
   <schema_version>3.0</schema_version>
   <name>check_model</name>
   <uid>372e81f1-0def-47d2-840c-e17cb6c8b78d</uid>
-  <version_id>fc08ff68-162f-49ca-98ef-9ae66dad5ef6</version_id>
-  <version_modified>20200801T213355Z</version_modified>
+  <version_id>048a8b71-7257-4006-9078-151ef230cc64</version_id>
+  <version_modified>20200816T022017Z</version_modified>
   <xml_checksum>0AD1E2E2</xml_checksum>
   <class_name>CheckModel</class_name>
   <display_name>CheckModel</display_name>
   <description>Uses Topolys to check a model</description>
   <modeler_description></modeler_description>
-  <arguments>
-    <argument>
-      <name>space_name</name>
-      <display_name>New space name</display_name>
-      <description>This name will be used as the name of the new space.</description>
-      <type>String</type>
-      <required>true</required>
-      <model_dependent>false</model_dependent>
-    </argument>
-  </arguments>
-  <outputs/>
-  <provenances/>
+  <arguments />
+  <outputs />
+  <provenances />
   <tags>
     <tag>Envelope.Form</tag>
   </tags>
@@ -53,17 +45,6 @@
   </attributes>
   <files>
     <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>2.9.1</identifier>
-        <min_compatible>2.9.1</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>4EBE0D97</checksum>
-    </file>
-    <file>
       <filename>LICENSE.md</filename>
       <filetype>md</filetype>
       <usage_type>license</usage_type>
@@ -82,22 +63,81 @@
       <checksum>00000000</checksum>
     </file>
     <file>
-      <filename>check_model_test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>304CDEC9</checksum>
-    </file>
-    <file>
       <filename>example_model.osm</filename>
       <filetype>osm</filetype>
       <usage_type>test</usage_type>
       <checksum>53D14E69</checksum>
     </file>
     <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.9.1</identifier>
+        <min_compatible>2.9.1</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>54924C7F</checksum>
+    </file>
+    <file>
+      <filename>check_model_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C42A393A</checksum>
+    </file>
+    <file>
+      <filename>edge_attributes.json</filename>
+      <filetype>json</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C4B63D00</checksum>
+    </file>
+    <file>
+      <filename>face_attributes.json</filename>
+      <filetype>json</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>CE62B4DD</checksum>
+    </file>
+    <file>
+      <filename>geometry.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>F1EA2F7C</checksum>
+    </file>
+    <file>
+      <filename>minimal_export.json</filename>
+      <filetype>json</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>37952A4D</checksum>
+    </file>
+    <file>
+      <filename>model.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>03805D8E</checksum>
+    </file>
+    <file>
+      <filename>transformation.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>8EC912F6</checksum>
+    </file>
+    <file>
+      <filename>version.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>61ADFE57</checksum>
+    </file>
+    <file>
+      <filename>vertex_properties.json</filename>
+      <filetype>json</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>E73590E1</checksum>
+    </file>
+    <file>
       <filename>README.md</filename>
       <filetype>md</filetype>
       <usage_type>readme</usage_type>
-      <checksum>F62C1407</checksum>
+      <checksum>60DDD358</checksum>
     </file>
   </files>
 </measure>
