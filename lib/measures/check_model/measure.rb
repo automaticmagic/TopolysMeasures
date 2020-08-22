@@ -102,9 +102,6 @@ class CheckModel < OpenStudio::Measure::ModelMeasure
       #puts "vertices = #{vertices}" # DLM: why does this line blow up?
       wire = tpm.get_wire(vertices)
       puts "wire = #{wire}"
-      puts wire.points
-      puts "normal"
-      puts wire.normal
 
       holes = []
       sub_surfaces = surface_structs[i][:sub_surfaces]
